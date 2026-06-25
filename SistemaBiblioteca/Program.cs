@@ -1,4 +1,9 @@
-﻿Console.WriteLine("Escriba su nombre: ");
+﻿using SistemaBiblioteca;
+
+List<Libro> miBiblioteca = new List<Libro>();
+
+
+Console.WriteLine("Escriba su nombre: ");
 string nombre = Console.ReadLine();
 Console.WriteLine($"hola {nombre}, bienvenido al sistema de biblioteca");
 
