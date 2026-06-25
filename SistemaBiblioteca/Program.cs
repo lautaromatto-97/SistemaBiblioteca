@@ -7,33 +7,49 @@ Console.ReadKey();
 
 Console.Clear();
 
-Console.WriteLine("====== SISTEMA BIBLIOTECA ======");
-Console.WriteLine("1. Agregar libro");
-Console.WriteLine("2. Mostrar libros");
-Console.WriteLine("3. Salir");
+bool salir = false;
 
-Console.Write("\nSeleccione una opcion: ");
-string opcion = Console.ReadLine();
-
-Console.WriteLine($"Elegiste la opción {opcion}");
-
-
-if(opcion == "1")
+while (salir == false)
+ 
 {
-    Console.WriteLine("Has seleccionado Agregar libro");
-}
-else if(opcion == "2") 
-{
-    Console.WriteLine("Has seleccionado Mostrar libros");
-}
-else if (opcion == "3") 
-{
-    Console.WriteLine("Saliendo del Sistema..");
-}
-else
+    Console.Clear();
+    Console.WriteLine("====== SISTEMA BIBLIOTECA ======");
+    Console.WriteLine("1. Agregar libro");
+    Console.WriteLine("2. Mostrar libros");
+    Console.WriteLine("3. Salir");
+
+    Console.Write("\nSeleccione una opcion: ");
+    string opcion = Console.ReadLine();
+
+    Console.WriteLine($"Elegiste la opción {opcion}");
+
+  
+    if (opcion == "1")
     {
-                Console.WriteLine("Opción incorrecta");
-            }
-
+        Console.Clear();
+        Console.WriteLine("Has seleccionado Agregar libro");
+        Console.WriteLine("Presione cualquier tecla para continuar...");
+        Console.ReadKey();
+    }
+    else if (opcion == "2")
+    {
+        Console.Clear();
+        Console.WriteLine("Has seleccionado Mostrar libros");
+        Console.WriteLine("Presione cualquier tecla para continuar...");
+        Console.ReadKey();
+    }
+    else if (opcion == "3")
+    {
+        Console.WriteLine("Saliendo del Sistema..");
+        salir = true;
+    }
+    else
+    {
+        Console.Clear();
+        Console.WriteLine("Opción incorrecta");
+        Console.WriteLine("Presione cualquier tecla para intentar de nuevo...");
+        Console.ReadKey();
+    }
+}
 Console.WriteLine("\nPresione cualquier tecla para salir...");
-Console.ReadKey();
+Console.ReadKey(); Console.Clear();
