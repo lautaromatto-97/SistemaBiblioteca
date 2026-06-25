@@ -69,7 +69,11 @@ while (salir == false)
 
     else if (opcion == "3")
     {
-        Console.WriteLine("Saliendo del Sistema..");
+        Console.Clear(); // <-- Limpiamos el menú
+        Console.WriteLine("=================================");
+        Console.WriteLine(" ¡Gracias por usar el Sistema! ");
+        Console.WriteLine("=================================");
+        
         salir = true;
     }
     else
