@@ -28,13 +28,26 @@ while (salir == false)
 
     Console.WriteLine($"Elegiste la opción {opcion}");
 
-  
+
     if (opcion == "1")
     {
         Console.Clear();
         Console.WriteLine("Has seleccionado Agregar libro");
+        Console.WriteLine("Ingrese el título del libro: ");
+        string TituloIngresado = Console.ReadLine();
+        Console.WriteLine("Ingrese el autor del libro: ");
+        string AutorIngresado = Console.ReadLine();
+        Console.WriteLine($"Libro agregado: {TituloIngresado} de {AutorIngresado}");
+
+        Libro nuevoLibro = new Libro();
+        nuevoLibro.Titulo = TituloIngresado;
+        nuevoLibro.Autor = AutorIngresado;
+
+        miBiblioteca.Add(nuevoLibro); //estamos guardando el libro en la lista de libros
+
         Console.WriteLine("Presione cualquier tecla para continuar...");
         Console.ReadKey();
+
     }
     else if (opcion == "2")
     {
