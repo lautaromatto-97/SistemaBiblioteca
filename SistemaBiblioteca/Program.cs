@@ -50,12 +50,23 @@ while (salir == false)
 
     }
     else if (opcion == "2")
-    {
-        Console.Clear();
-        Console.WriteLine("Has seleccionado Mostrar libros");
-        Console.WriteLine("Presione cualquier tecla para continuar...");
+   
+        {
+            Console.Clear();
+
+        Console.WriteLine("Has seleccionado Mostrar libros...");
+        Console.WriteLine("Presione enter para acceder a la lista de libros");
         Console.ReadKey();
-    }
+        Console.Clear();  
+        Console.WriteLine("====== LISTA DE LIBROS ======");
+        foreach (Libro libro in miBiblioteca)
+            {
+                Console.WriteLine($"Titulo: {libro.Titulo} - Autor: {libro.Autor}");
+            }
+            Console.WriteLine("Presione cualquier tecla para continuar...");
+            Console.ReadKey();
+        }
+
     else if (opcion == "3")
     {
         Console.WriteLine("Saliendo del Sistema..");
